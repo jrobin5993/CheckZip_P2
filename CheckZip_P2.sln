@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35013.160
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CheckZip_P2", "CheckZip_P2.csproj", "{186EC2C7-75BC-4258-95C9-4027799B96B0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{186EC2C7-75BC-4258-95C9-4027799B96B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{186EC2C7-75BC-4258-95C9-4027799B96B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{186EC2C7-75BC-4258-95C9-4027799B96B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{186EC2C7-75BC-4258-95C9-4027799B96B0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3B53FC6D-0DEB-45E5-AAEE-7E4C6E719E76}
+	EndGlobalSection
+EndGlobal
