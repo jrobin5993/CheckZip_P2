@@ -13,38 +13,51 @@ namespace CheckZip
     {
         static void Main(String[] args)
         {
-            // This program allows the user to enter 10 zip codes.
-            // The program then sorts the data and displays the
-            // data in order.
+            string[] zipCodes = { /* Your existing zip codes */ };
+            double[] deliveryCharges = { /* Your delivery charges */ };
 
-            // Initialize the array with 10 zip codes
-            int[] zipCodes = new int[10];
-            Console.WriteLine("Please enter 10 zip codes, press Enter after each.");
-
-            // Loop to collect zip codes from the user
-            for (int i = 0; i < 10; i++)
+            while (true)
             {
-                Console.Write($"Enter zip code [i + 1]: ");
-                while (!int.TryParse(Console.ReadLine(), out zipCodes[i]) || zipCodes[i] < 0)
+                Console.WriteLine("Choose an option:");
+                Console.WriteLine("1. Print all zip codes");
+                Console.WriteLine("2. Print zip codes and delivery charges");
+                Console.WriteLine("3. Search for a zip code");
+                Console.WriteLine("4. Exit");
+
+                int choice = int.Parse(Console.ReadLine());
+
+
+                switch (choice)
                 {
-                    Console.Write("Invalid input. Please enter a valid positive zip code: ");
+                    case 1:
+                        // Print all zip codes
+                        foreach (var zip in zipCodes)
+                            Console.WriteLine(zip);
+                        break;
+                    case 2:
+                        // Print zip codes and delivery charges
+                        for (int i = 0; i < zipCodes.Length; i++)
+                            Console.WriteLine($"{zipCodes[i]} - ${deliveryCharges[i]:F2}");
+                        break;
+                    case 3:
+                        // Search for a zip code
+                        Console.Write("Enter a zip code: ");
+                        string searchZip = Console.ReadLine();
+                        int index = Array.IndexOf(zipCodes, searchZip);
+                        if (index != -1)
+                            Console.WriteLine($"Delivery charge for {searchZip}: ${deliveryCharges[index]:F2}");
+                        else
+                            Console.WriteLine($"No delivery to {searchZip}");
+                        break;
+                    case 4:
+                        // Exit
+                        Environment.Exit(0);
+                        break;
+                    default:
+                        Console.WriteLine("Invalid choice. Try again.");
+                        break;
                 }
             }
-
-            //Sort the zip codes
-            Array.Sort(zipCodes);
-            Console.WriteLine("\nThe sorted zip codes are:");
-
-            // Loop to display the sorted zip codes
-            for (int i = 0; i < 10; i++)
-            {
-                Console.WriteLine(zipCodes[i]);
-            }
-
-            // Keep the console window open
-            Console.WriteLine("\nPress any key to exit.");
-            Console.ReadKey();
-
         }
     }
 }
